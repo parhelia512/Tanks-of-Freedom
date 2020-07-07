@@ -330,9 +330,9 @@ func generate_map():
 
 			terrain_under_building = null
 
-	for cell in cells_to_change:
-		if(cell.type > -1):
-			terrain.set_cell(cell.x,cell.y,cell.type)
+	for single_cell in cells_to_change:
+		if(single_cell.type > -1):
+			terrain.set_cell(single_cell.x,single_cell.y,single_cell.type)
 	self.connect_fences()
 	units.hide()
 
@@ -669,12 +669,12 @@ func fill_map_from_data_array(data):
 		underground.clear()
 	terrain.clear()
 	units.clear()
-	for cell in data:
-		if cell.terrain > -1:
-			terrain.set_cell(cell.x, cell.y, cell.terrain)
+	for single_cell in data:
+		if single_cell.terrain > -1:
+			terrain.set_cell(single_cell.x, single_cell.y, single_cell.terrain)
 
-		if cell.unit > -1:
-			units.set_cell(cell.x, cell.y, cell.unit)
+		if single_cell.unit > -1:
+			units.set_cell(single_cell.x, single_cell.y, single_cell.unit)
 	units.raise()
 
 func fill(width, height):
