@@ -21,7 +21,8 @@ margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
 __meta__ = {
-"__editor_plugin_screen__": "2D"
+"__editor_plugin_screen__": "2D",
+"_edit_use_anchors_": false
 }
 
 [node name="background" type="NinePatchRect" parent="."]

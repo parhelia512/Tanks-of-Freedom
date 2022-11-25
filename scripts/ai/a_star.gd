@@ -56,16 +56,17 @@ func set_obstacles(obstacle_positions):
 	self.set_obstacles_old(obstacle_positions)
 	return
 
-	for positionVAR in obstacle_positions:
-		self.new_obstacles.push_back(self._get_point_id(positionVAR.x, positionVAR.y))
-
-	for id in self.bag.helpers.array_diff(self.obstacles, self.new_obstacles):
-		self._remove_obstacle(id)
-	for id in self.bag.helpers.array_diff(self.new_obstacles, self.obstacles):
-		self._add_obstacle(id)
-
-	self.obstacles = Array(self.new_obstacles)
-	self.new_obstacles = []
+# TODO Unused code, don't know why
+#	for positionVAR in obstacle_positions:
+#		self.new_obstacles.push_back(self._get_point_id(positionVAR.x, positionVAR.y))
+#
+#	for id in self.bag.helpers.array_diff(self.obstacles, self.new_obstacles):
+#		self._remove_obstacle(id)
+#	for id in self.bag.helpers.array_diff(self.new_obstacles, self.obstacles):
+#		self._add_obstacle(id)
+#
+#	self.obstacles = Array(self.new_obstacles)
+#	self.new_obstacles = []
 
 func set_obstacles_old(obstacle_positions):
 	for positionVAR in obstacle_positions:

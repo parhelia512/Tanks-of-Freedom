@@ -27,7 +27,6 @@ func write_as_plain_file(path, data):
 	file.open(path, File.WRITE)
 	file.store_line("var map_data = [")
 	var cell_line
-	var cell
 	for cell in data['tiles']:
 		cell_line = "'x': " + str(cell.x) + ", "
 		cell_line += "'y': " + str(cell.y) + ", "
